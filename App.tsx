@@ -11,6 +11,7 @@ import Mission from './sections/Mission';
 import PhilosophySection from './sections/PhilosophySection';
 import Progress from './sections/Progress';
 import TechSection from './sections/TechSection';
+import Team from './sections/Teams';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <Mission />
         <PhilosophySection />
         <TechSection />
+        <Team />
         <Contact />
       </main>
       <Footer />
