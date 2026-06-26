@@ -1,6 +1,7 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { contact, branding } from '@/data';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../components/Button';
 
@@ -67,12 +68,12 @@ const Contact: React.FC = () => {
               06 - Contact
             </div>
             <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 leading-tight text-brand-text">
-              Connect with <br />SpandaVidya
+              Connect with <br />{branding.title}
             </h2>
             <p className="text-lg text-brand-muted leading-relaxed mb-8 max-w-xl">
               We are inviting researchers, medical clinicians, Ayurvedic experts, and mission-aligned investors to join our research hub.
             </p>
-            <Button href="mailto:Dilpar99@gmail.com" className="w-full md:w-auto">
+            <Button href={`mailto:${contact.supportEmail}`} className="w-full md:w-auto">
               Send an Inquiry
             </Button>
           </div>
@@ -92,7 +93,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm tracking-wide uppercase text-brand-muted font-semibold mb-1">Official Email</p>
-                <p className="text-brand-text font-medium">Dilpar99@gmail.com</p>
+                <p className="text-brand-text font-medium">{contact.supportEmail}</p>
               </div>
             </div>
 
@@ -110,7 +111,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm tracking-wide uppercase text-brand-muted font-semibold mb-1">Headquarters</p>
-                <p className="text-brand-text font-medium">Advanced Health-Tech Research Hub</p>
+                <p className="text-brand-text font-medium">{contact.location}</p>
               </div>
             </div>
           </div>

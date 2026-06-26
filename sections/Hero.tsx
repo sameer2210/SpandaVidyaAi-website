@@ -2,6 +2,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Button from '../components/Button';
+import { urls } from '@/data';
 
 const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -87,7 +88,7 @@ const Hero: React.FC = () => {
         <div ref={ctaRef} className="flex flex-wrap gap-5">
           <Button href="#approach" className="shadow-2xl shadow-brand-accent/20">Our Technology</Button>
           <Button href="#contact" variant="secondary">Partner & Collaborate</Button>
-          <Button href="https://naadi-raksha-liart.vercel.app/" variant="secondary" className="bg-brand-accent/5 border-brand-accent/35">
+          <Button href={urls.chatbotUrl} variant="secondary" className="bg-brand-accent/5 border-brand-accent/35">
             Try Spandhvidya Chatbot
           </Button>
         </div>

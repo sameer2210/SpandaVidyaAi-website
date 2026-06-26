@@ -1,15 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink } from '../types';
+import { branding, urls, navigationLinks } from '@/data';
 
-const links: NavLink[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'Approach', href: '#approach' },
-  { label: 'Progress', href: '#progress' },
-  { label: 'Mission', href: '#mission' },
-  { label: 'Contact', href: '#contact' },
-  { label: 'Team', href: '#team' },
-];
+const links = navigationLinks;
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +58,7 @@ const Navbar: React.FC = () => {
         <div className="h-[68px] md:h-[72px] px-8 md:px-6 flex items-center justify-between">
           <a href="#home" className="group flex items-center">
             <img
-              src="/logo2.png"
+              src={branding.logo}
               alt="SpandaVidya Logo"
               className="h-14 md:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             />
@@ -83,7 +77,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="https://naadi-raksha-liart.vercel.app/"
+              href={urls.chatbotUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group ml-2 inline-flex items-center gap-2 rounded-full bg-brand-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(181,139,42,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(181,139,42,0.45)]"
@@ -123,7 +117,7 @@ const Navbar: React.FC = () => {
               ))}
             </div>
             <a
-              href="https://naadi-raksha-liart.vercel.app/"
+              href={urls.chatbotUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-brand-accent px-6 py-3.5 text-center text-sm font-semibold text-white shadow-[0_10px_22px_rgba(181,139,42,0.35)] transition-all duration-300 hover:bg-brand-accent/95"

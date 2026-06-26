@@ -1,13 +1,6 @@
+import { progressSteps } from '@/data';
 
-import React from 'react';
-
-const steps = [
-  { text: "Conceptual framework for digitized SpandaVidya defined", date: "2023" },
-  { text: "Multi-position radial pulse acquisition prototype built", date: "2024" },
-  { text: "Pilot clinical data collection for signal validation", date: "2024" },
-  { text: "Advanced signal processing pipeline optimization", date: "2025" },
-  { text: "AI modeling & Multi-centric validation phase", date: "Active" }
-];
+const steps = progressSteps;
 
 const Progress: React.FC = () => {
   return (
